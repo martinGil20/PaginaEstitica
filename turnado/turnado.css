@@ -96,6 +96,7 @@
   }
   
     .header-content-containerr {
+      
       margin:50%;  
       background-color: #12121C;
       padding: 50px;
@@ -238,11 +239,10 @@
         padding: 0 0 120px 0;
         text-align: center;
       }
-    
+
       .services-content{
-        margin-top: 50px;
+        grid-template-columns: auto;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
       }
     
@@ -252,8 +252,8 @@
         padding: 35px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        padding-top: 5px;
       }
     
       .services-1:hover{
@@ -265,14 +265,10 @@
         cursor: pointer;
       }
     
-      .services-1 img{
-        width: 30px;
-        margin-bottom: 10px;
-      }
-    
-      .services-1 h3{
-        color: #FDFEFF;
-        margin-bottom: 15px;
+      .services-1{
+        color: white;
+        
+        
       }
     
       .price{
@@ -347,7 +343,38 @@
       .link a:hover{
         color: #687CEF;
       }
-    
+
+      .services-1 h3{
+        font-size: 20px;
+      }
+
+      .services-1 h1{
+        font-size: 15px; 
+      }
+
+      .services-1 h2{
+        margin-top: 40px;
+        font-size: 20px;
+        color: rgb(109, 107, 107); 
+      }
+
+
+      .hora{
+        font-size: 20px;
+        color: rgb(109, 107, 107);
+        margin-left: auto;
+        margin-top: -34px;
+      }
+
+      hr{
+        border: none;  
+        height: 2px;  
+        background-color: yellow; 
+        width: 100%;
+        position: relative;
+        top: -15px;
+      }
+
       @media(max-width:992px){
     
         .menu label{

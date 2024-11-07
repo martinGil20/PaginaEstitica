@@ -81,6 +81,8 @@
     }
   
     .btn-success{
+      padding: 25px 40px;
+      margin-left: auto;
       background-color: #12121C !important;
       border-color: #12121C !important;
     }
@@ -138,9 +140,7 @@
         margin-bottom: 35px;
       }
     
-      .buttons{
-        margin-top: 20px;
-      }
+      
     
       .btn-1{
         display: inline-block;
@@ -153,6 +153,8 @@
         color: #FDFEFF;
         margin: 0 15px;
       }
+
+     
     
     
       .informartion{
@@ -256,19 +258,9 @@
         padding-top: 5px;
       }
     
-      .services-1:hover{
-        background: linear-gradient(
-          90deg,
-          rgba(37,118,250,1) 0%,
-          rgba(84,115,237,1) 100%
-        );
-        cursor: pointer;
-      }
     
       .services-1{
         color: white;
-        
-        
       }
     
       .price{
@@ -373,6 +365,15 @@
         width: 100%;
         position: relative;
         top: -15px;
+      }
+
+      .btn-large{
+        padding: 5px 50px !important;
+        font-size: 18px !important;
+      }
+
+      .btn-large:hover{
+        background-color: #687CEF !important;
       }
 
       @media(max-width:992px){

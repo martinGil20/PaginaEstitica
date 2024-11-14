@@ -98,7 +98,7 @@
   }
 
   .logo-imagen{
-    max-width: 105px;
+    max-width: 140px;
     height: auto;
   }
 
@@ -164,24 +164,35 @@
     margin: 0 15px;
   }
 
-
   .informartion{
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 100px;
     margin-top: 25px;
   }
 
+  .informartion containerr{
+    
+  }
+
 
   .informartion-1{
-    margin: 0 10px;
+    margin: 10px;
+    width: 48%;
     background: linear-gradient(
       90deg,
       rgba(84,105,210,1) 0%,
       rgba(35,43,88,1) 68%
     );
-    padding: 20px;
+    padding: 10px;
     border-radius: 15px;
+  }
+
+  .informartion-1 img{
+    width: 100%; /* La imagen ocupará todo el ancho de su contenedor */  
+    height: auto; /* Mantiene la proporción de la imagen */  
+    border-radius: 8px;
   }
 
   .informartion-1 h3{
@@ -221,15 +232,20 @@
     border-radius: 15px;
   }
 
-  .about-txt{
-    flex-basis: 50%;
+  .about-txt h2{
+    font-size: 55px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #FDFEFF;
+    margin-bottom: 60px;
+    text-align: center;
   }
 
-  .about-txt h2{
-    font-size: 40px;
-    color: #FDFEFF;
-    line-height: 1.4;
-    margin-bottom: 15px;
+  .about-txt mapa{
+    margin-top: 20px;
+  }
+
+  .about-txt{
+    margin-top: 80px;
   }
 
   .about-txt a{

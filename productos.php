@@ -29,18 +29,18 @@
             <div class="nav-ancho">
                 <ul class="navbar-nav flex-column pe-3 mt-3">  
                     <li class="nav-item">  
-                        <a class="nav-link nav-link-custom" aria-current="page" href="navegacion.html">  
+                        <a class="nav-link nav-link-custom" aria-current="page" href="navegacion.php">  
                             <img src="images/icons8-casa-64.png" alt="Inicio" class="icono"> Inicio  
                         </a>  
                     </li>  
                     <li class="nav-item">  
-                        <a class="nav-link nav-link-custom" href="productos.html">  
+                        <a class="nav-link nav-link-custom" href="productos.php">  
                             <img src="images/icons8-servicios-64.png" alt="Servicios" class="icono"> Servicios  
                         </a>  
                     </li>
                     
                     <li class="nav-item">  
-                        <a class="nav-link nav-link-custom" href="turnado/turnado.html">  
+                        <a class="nav-link nav-link-custom" href="turnado/turnado.php">  
                             <img src="images/icons8-agenda-50.png" alt="Turnado" class="icono"> Turnado 
                         </a>  
                     </li>

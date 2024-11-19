@@ -201,6 +201,15 @@ button.ghost {
   transition: translateX(-20%);
 }
 
+.error{
+  background-color: rgb(190, 55, 55);
+  color: black;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
 /* Animation */
 
 /* Move signin to the right */

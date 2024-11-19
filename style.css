@@ -24,6 +24,11 @@
     margin-right: 25px;
   }
 
+  .boton-usuario{
+    margin-right: 90px;
+    cursor: pointer;
+  }
+
   .custom-offcanvas{
     margin-top: 55px;
     background-color: #12121C !important;
@@ -375,6 +380,10 @@
     max-width: 100%;
     height: auto;
   }
+
+  
+
+  
 
   @media(max-width:992px){
 

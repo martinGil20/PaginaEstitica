@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +20,19 @@
 <body>
     <nav class="navbar navbar-dark fixed-top navbar-custom">  
         <div class="container-fluid">  
-            <a class="navbar-brand" href="#"> <img src="images/logo2.jpg" class="logo-imagen" alt=""></a>  
+            <a class="navbar-brand" href="#"> <img src="images/logo2.jpg" class="logo-imagen" alt=""></a>
+            <div class="boton-usuario" onclick="toggleInfo()" style="position: relative; cursor: pointer;">  
+                <img src="images/icons8-usuario-50.png" alt="Usuario">  
+            </div>  
+            
+            <div id="user-info" style="display: none; position: absolute; right: 100px; top: 80px; background: #1E202D; border: 1px solid #ccc; padding: 10px; z-index: 100;">  
+                <?php if (isset($_SESSION['Usuario'])): ?>  
+                    <p>Bienvenido, <?php echo $_SESSION['Usuario']; ?>!</p>  
+                    <a href="/Pagina/login/cerrarSesion.php" class="btn btn-danger">Cerrar sesión</a>  
+                <?php else: ?>  
+                    <p><a href="login/index.php" class="btn btn-primary">Iniciar sesión</a></p>  
+                <?php endif; ?>  
+            </div>  
             <div class="menu-hamburguesa">  
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"  
                     aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">  
@@ -28,22 +44,21 @@
             <div class="nav-ancho">
                 <ul class="navbar-nav flex-column pe-3 mt-3">  
                     <li class="nav-item">  
-                        <a class="nav-link nav-link-custom" aria-current="page" href="navegacion.html">  
+                        <a class="nav-link nav-link-custom" aria-current="page" href="navegacion.php">  
                             <img src="images/icons8-casa-64.png" alt="Inicio" class="icono"> Inicio  
                         </a>  
                     </li>  
                     <li class="nav-item">  
-                        <a class="nav-link nav-link-custom" href="productos.html">  
+                        <a class="nav-link nav-link-custom" href="productos.php">  
                             <img src="images/icons8-servicios-64.png" alt="Servicios" class="icono"> Servicios  
                         </a>  
                     </li>
                     
                     <li class="nav-item">  
-                        <a class="nav-link nav-link-custom" href="turnado/turnado.html">  
+                        <a class="nav-link nav-link-custom" href="turnado/turnado.php">  
                             <img src="images/icons8-agenda-50.png" alt="" class="icono"> Turnado 
                         </a>  
                     </li>
-                    
                 </ul>  
 
                 <form class="ancho-buscar" role="search">  
@@ -178,7 +193,22 @@
                 window.location.href = link.href; // Navegar a la URL original  
             }, 100); // Esperar un poco antes de navegar  
         }  
-        </script>
+    </script>
+
+    <script>  
+        function toggleInfo() {  
+            var userInfo = document.getElementById('user-info');  
+            userInfo.style.display = (userInfo.style.display === 'none' || userInfo.style.display === '') ? 'block' : 'none';  
+        }  
+
+        // Cerrar el cuadro al hacer clic afuera  
+        window.onclick = function(event) {  
+            var userInfo = document.getElementById('user-info');  
+            if (!event.target.closest('.boton-usuario') && userInfo.style.display === 'block') {  
+                userInfo.style.display = 'none';  
+            }  
+        }  
+    </script>  
     
         
 </body>

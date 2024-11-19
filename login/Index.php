@@ -9,7 +9,7 @@
       crossorigin="anonymous">
     </script>
     <title>login CSS</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/Pagina/login/login.css">
 </head>
 <body class="login-body">
     <div class="container" id="container">
@@ -34,8 +34,16 @@
           </form>
         </div>
         <div class="form-container sign-in-container">
-          <form id="LoginForm">
+          <form id="LoginForm" action="IniciarSesion.php" method="POST">
             <h1>Iniciar Sesión</h1>
+            <hr>
+            <?php
+              if(isset($_GET['error'])){
+                  echo "<p style='background-color: rgb(190, 55, 55) ; color: black; padding: 10px; border-radius: 5px; width: 95%; font-size: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-family: sans serif;'>" . $_GET['error'] . "</p>";
+              }
+            ?>
+            <hr>
+
             <div class="social-container">
               <a href="#" class="social">
                 <i class="fab fa-facebook-f"></i>
@@ -48,8 +56,8 @@
               </a>
             </div>
             <br>
-            <input type="email" id="loginEmail" placeholder="Email" required/>
-            <input type="password" id="loginPassword" placeholder="Password" required />
+            <input type="text" name="Usuario" id="loginEmail" placeholder="Usuario" required/>
+            <input type="password" name="Clave" id="loginPassword" placeholder="Contraseña" required />
             <a href="#">Olvidaste tu contraseña?</a>
             <button id="loginButton" type="submit">Iniciar sesión</button>
           </form>
@@ -72,21 +80,6 @@
         </div>
       </div>
   
-      <script src="app.js"></script>
-      <script>
-        document.getElementById('loginButton').addEventListener("click", function(event) {
-          event.preventDefault();
-
-          const email = document.getElementById('loginEmail').value;
-          const password = document.getElementById('loginPassword').value
-
-          if(email === "martin@gmail.com" && password === "1234"){
-            window.location.href = 'pagina/navegacion.html';
-          }else {
-            alert("Correo electronico o contraseña incorrectos.");
-          }
-        });
-      </script>
-      
+      <script src="app.js"></script>  
 </body>
 </html>

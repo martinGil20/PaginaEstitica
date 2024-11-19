@@ -15,7 +15,7 @@
     .menu-hamburguesa{
       position: absolute;
       left: 75px;
-  }
+    }
   
     .custom-offcanvas{
       margin-top: 55px;
@@ -38,6 +38,7 @@
   
     .custom-offcanvas{
         margin-top: 55px !important;
+        
         
     }
     .nav-link-custom{

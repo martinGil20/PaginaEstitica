@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="turnado.css">
+    <link rel="stylesheet" href="turnado.css?v=<?= time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -16,14 +16,26 @@
 <body>   
     <nav class="navbar navbar-dark fixed-top navbar-custom">  
         <div class="container-fluid">  
-            <a class="navbar-brand" href="#">LOGO</a>  
+        <a class="navbar-brand" href="#"> <img src="../images/logo2.jpg" class="logo-imagen" alt=""></a>
+            <div class="boton-usuario" onclick="toggleInfo()" style="position: relative; cursor: pointer;">  
+                <img src="../images/icons8-usuario-50.png" alt="Usuario">  
+            </div> 
+            
+            <div id="user-info" style="display: none; position: absolute; right: 100px; top: 80px; background: #1E202D; border: 1px solid #ccc; padding: 10px; z-index: 100;">  
+                <?php if (isset($_SESSION['Usuario'])): ?>  
+                    <p>Bienvenido, <?php echo $_SESSION['Usuario']; ?>!</p>  
+                    <a href="/Pagina/login/cerrarSesion.php" class="btn btn-danger">Cerrar sesión</a>  
+                <?php else: ?>  
+                    <p><a href="login/index.php" class="btn btn-primary">Iniciar sesión</a></p>  
+                <?php endif; ?>  
+            </div>
             <div class="menu-hamburguesa">  
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"  
                     aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">  
                     <span class="navbar-toggler-icon"></span>  
                 </button>  
             </div>  
-            <div class="offcanvas offcanvas-start text-bg-dark custom-offcanvas" tabindex="-1"  
+            <div class="offcanvas offcanvas-start custom-offcanvas" tabindex="-1"  
                 id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">  
             <div class="nav-ancho">
                 <ul class="navbar-nav flex-column pe-3 mt-3">  
@@ -54,7 +66,7 @@
         </div>  
     </nav>
 
-    <div class="header-content-containerr">
+    
         <main class="services containerr">
 
             <div class="services-content">
@@ -124,7 +136,7 @@
         </main>
 
 
-            <footer class="footer"></footer>
+            <footer class="footer">
                 <div class="footer-content containerr">
                     <div class="link">
                         <h3>lorem</h3>
